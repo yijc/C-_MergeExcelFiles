@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="MergeExcel.exe" version="1.0.0.4" publicKeyToken="27646aa2c075e0d2" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="MergeExcel" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="MergeExcel.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MergeExcel.exe" size="24464">
+      <assemblyIdentity name="MergeExcel" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>avKDHF/+nf16UNZ81iLqIZTAMFLOQAJ6rl1CdER3CrY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="MergeExcel.exe.config" size="934">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>UwYiMURwyeJcZU6/0w5qevIGPE/PTIORgtDry0AFEuM=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=ADS\yiji" issuerKeyHash="ed33df39186e0856f7931e5a255661c41609a709" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>mFH8FfdXoKpLbYqiFfzrBnaPfYPnMuxwC6Op0YiZ5Hg=</DigestValue></Reference></SignedInfo><SignatureValue>t4YkYrIzJAbvM/ZlCWeo4U7A1yV8cV5IQoh9QIxRJ4C57ZNny2PeOK4qFMnWptNNjHoXOqYtHNpLniNLCSmmx7rrk07F2Ai6QYOg7SGUJXA4+N//9oUha5KvA2Nvy6+aglunOIwxNtng8S2A7FARI/vQKOQBQyRLb5pz8vG13+I=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>vpKyfAoTAZGR9/EtHL8j7JLY+VuTpRcsBDE46zOqE4t6NjWSE7HGMnfekabbyHOWhGx8Ji+rCTpSlUvIWiajQwJocTJ6Xr4uSrHydNuLYx4Tm5kHR6D2wL+aecLlPFPY6J4+JP/7l9HSC3mm5cPEtSokMxzWVtGt6VmXqrJNOaU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="78e49988d1a9a30b70ec32e7837d8f7606ebfc15a28a6d4baaa057f715fc5198" Description="" Url=""><as:assemblyIdentity name="MergeExcel.exe" version="1.0.0.4" publicKeyToken="27646aa2c075e0d2" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=ADS\yiji</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>RWlYh7rBiXTa21+eFzst0L1HJQYUpgLjj5gUTCsZGio=</DigestValue></Reference></SignedInfo><SignatureValue>ZBZ7uE5Ih2EZh4ArkPlXimdOr52EfCnuM5xKadLOww/s1o2O8dX/x3bNbd7+J8DN03jBEIvxmIF7JhNPx0tfFI3rDvP4mfiwoI/SERar22s4KFwbitJA10efy76C2xGKXvTlXRyIgYwGt1o8CDD3EWXwqh4NldX0WdJcfpG3T1s=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>vpKyfAoTAZGR9/EtHL8j7JLY+VuTpRcsBDE46zOqE4t6NjWSE7HGMnfekabbyHOWhGx8Ji+rCTpSlUvIWiajQwJocTJ6Xr4uSrHydNuLYx4Tm5kHR6D2wL+aecLlPFPY6J4+JP/7l9HSC3mm5cPEtSokMxzWVtGt6VmXqrJNOaU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBuTCCASKgAwIBAgIQE/zD43peg4VH7EQF69TWUjANBgkqhkiG9w0BAQsFADAbMRkwFwYDVQQDHhAAQQBEAFMAXAB5AGkAagBpMB4XDTE2MTAwNjEyMTQzMFoXDTE3MTAwNjE4MTQzMFowGzEZMBcGA1UEAx4QAEEARABTAFwAeQBpAGoAaTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAvpKyfAoTAZGR9/EtHL8j7JLY+VuTpRcsBDE46zOqE4t6NjWSE7HGMnfekabbyHOWhGx8Ji+rCTpSlUvIWiajQwJocTJ6Xr4uSrHydNuLYx4Tm5kHR6D2wL+aecLlPFPY6J4+JP/7l9HSC3mm5cPEtSokMxzWVtGt6VmXqrJNOaUCAwEAATANBgkqhkiG9w0BAQsFAAOBgQBCP5B4fAye6Z0az6Jh5DVJ3EDdi1W+Zd87Tu+cgyuwB+Qrq/7ckx9hOjVP1lb6c8Ghca8Qo4b1U2F861rnFbFsNVuqfbWtGM2jV/sdODbgsjlUNlqVW+w0/jIAOGUnQ6paGQXwDFv/aN6ESAJ8Bg/05EtlSWdmODTWtT1TFbZlYQ==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
