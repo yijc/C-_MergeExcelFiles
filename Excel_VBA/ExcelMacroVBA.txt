@@ -1,0 +1,104 @@
+Sub TreatmentDuration()
+'
+' TreatmentDuration Macro
+'
+    Application.ScreenUpdating = False
+
+    Dim ws_count As Integer
+    Dim ws_index As Integer
+
+    ' Set WS_Count equal to the number of worksheets in the active workbook.
+    'ws_count = ActiveWorkbook.Worksheets.Count
+    
+    ' get the "StartDate" column index
+    Dim col_startdate As Integer
+    col_startdate = 9
+    ' get the "EndDate" column index
+    Dim col_enddate As Integer
+    col_enddate = 10
+    ' get the new "Duration" column index
+    Dim col_duration As Integer
+    col_duration = 11
+    ' get the "Name" column index
+    Dim col_name As Integer
+    col_name = 4
+
+    'Loop Through All Worksheets in a Workbook
+    ' Begin the loop.
+    Dim ws As Worksheet
+    For Each ws In ActiveWorkbook.Worksheets
+
+        ' get the current sheet of the active work book
+        'Dim ws As Worksheet
+
+        ' Insert your code here.
+        ' The following line shows how to reference a sheet within
+        ' the loop by displaying the worksheet name in a dialog box.
+        'MsgBox ActiveWorkbook.Worksheets(I).Name
+        'ws = ActiveWorkbook.Worksheets.Item(ws_index)
+        
+        ' get the row count
+        Dim row_count As Integer
+        row_count = ws.UsedRange.Rows.Count
+                    
+        'Dim vStartDate As Variant
+        'Dim vEndDate As Variant
+        'Dim vDuration As Variant
+
+        Dim date_start As Date
+        Dim date_end As Date
+        Dim date_duration As Date
+               
+        ' Loop through all rows except the header
+        Dim row_index As Integer
+        For row_index = 2 To row_count
+            ' if we can find a end date for this row
+            Dim bHasEndDate As Boolean
+            bHasEndDate = True
+            
+            ' get the cell of "EndDate"
+            'Dim cell_enddate As Range
+            'set cell_enddate = OFFSET($A$1, row_index-1,col_enddate-1)
+            'date_end = ws.Cells(row_index, col_enddate)
+            Dim vEndDate As Variant
+            vEndDate = ws.Cells(row_index, col_enddate)
+            'If date_end = vbNullString Or date_end = "NA" Then
+            If IsEmpty(ws.Cells(row_index, col_enddate)) Or vEndDate = vbNullString Or vEndDate = "NA" Then
+                bHasEndDate = False
+                
+                Dim name As Variant
+                name = ws.Cells(row_index, col_name)
+                'If name = vbNullString Then
+                'MsgBox "Row hasn't name!"
+                
+                ' the end date is empty then find a match date
+                Dim row_found As Integer
+                For row_found = row_index - 1 To 2 Step -1
+                    ' check if names match up
+                    If ws.Cells(row_found, col_name) <> name Then
+                        Exit For
+                    End If
+                    
+                    vEndDate = ws.Cells(row_found, col_enddate)
+                    If Not IsEmpty(ws.Cells(row_index, col_enddate)) And vEndDate <> vbNullString And vEndDate <> "NA" Then
+                        bHasEndDate = True
+                        date_end = ws.Cells(row_found, col_enddate)
+                        Exit For
+                    End If
+                 Next
+            Else
+                 date_end = ws.Cells(row_index, col_enddate)
+            End If
+            
+            ' calculate duration
+            If bHasEndDate Then
+                'Dim cell_startdate As Range
+                date_start = ws.Cells(row_index, col_startdate)
+                ws.Cells(row_index, col_duration) = date_end - date_start
+            End If
+        Next
+    Next
+
+    Application.ScreenUpdating = True
+    '
+End Sub
